@@ -7,7 +7,6 @@ namespace Liqpay.Net
 {
     public static class LiqpayUtils
     {
-
         public static string ToBase64String(this string text)
         {
             if (text == null)

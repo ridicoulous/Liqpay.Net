@@ -9,5 +9,7 @@ namespace Liqpay.Net.Interfaces
     public interface ILiqpayClient
     {
         Task<LiqpayResponse> SendRequest(LiqpayRequest request);
+        LiqpayResponse OnServerCallback(string data, string signature);
+        bool CheckSignature(string data, string signature);
     }
 }
