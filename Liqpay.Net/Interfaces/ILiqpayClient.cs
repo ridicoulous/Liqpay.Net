@@ -11,5 +11,6 @@ namespace Liqpay.Net.Interfaces
         Task<LiqpayResponse> SendRequest(LiqpayRequest request);
         LiqpayResponse OnServerCallback(string data, string signature);
         bool CheckSignature(string data, string signature);
+        (string data, string signature) GenerateRequest(LiqpayRequest request);
     }
 }
