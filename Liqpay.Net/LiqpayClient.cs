@@ -11,11 +11,12 @@ namespace Liqpay.Net
     public class LiqpayClient : ILiqpayClient
     {
         private readonly HttpClient _httpClient;
-        private readonly ILogger<LiqpayClient> _logger;
+        private readonly ILogger? _logger;
         private readonly ILiqpayClientParams _config;
-        public LiqpayClient(ILiqpayClientParams config, ILogger<LiqpayClient> logger)
+        public LiqpayClient(ILiqpayClientParams config)
         {
-            _logger = logger;
+            _config = config;
+            _logger = _config.Logger;
             _httpClient = config.HttpClient ?? new HttpClient();
         }
 

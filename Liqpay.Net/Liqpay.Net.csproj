@@ -6,7 +6,7 @@
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 		<Authors>ridicoulous</Authors>
-		<Version>0.0.3-pre</Version>
+		<Version>0.0.4-pre</Version>
 		<PackageProjectUrl>https://github.com/ridicoulous/Liqpay.Net/</PackageProjectUrl>
 		<PackageLicenseUrl>https://github.com/ridicoulous/Liqpay.Net/blob/master/LICENSE</PackageLicenseUrl>
 		<PackageTags>liqpay</PackageTags>
