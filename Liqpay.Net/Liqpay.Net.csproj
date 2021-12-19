@@ -1,12 +1,26 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<Nullable>enable</Nullable>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<Authors>ridicoulous</Authors>
+		<Version>0.0.1-pre</Version>
+		<PackageProjectUrl>https://github.com/ridicoulous/Liqpay.Net/</PackageProjectUrl>
+		<PackageLicenseUrl>https://github.com/ridicoulous/Liqpay.Net/blob/master/LICENSE</PackageLicenseUrl>
+		<PackageTags>liqpay</PackageTags>
+		<RepositoryUrl>https://github.com/JTOne123/liqpay-dotnet</RepositoryUrl>
+		<RepositoryType>github</RepositoryType>
+		<Product>LiqPay SDK</Product>
+		<Description>C# wrapper for https://iqpay.ua API</Description>
+		<PackageIconUrl>https://www.liqpay.ua/favicon.ico</PackageIconUrl>
+		<PackageId>Liqpay.Net</PackageId>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="System.Text.Json" Version="6.0.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="System.Text.Json" Version="6.0.0" />
+	</ItemGroup>
 
 </Project>
