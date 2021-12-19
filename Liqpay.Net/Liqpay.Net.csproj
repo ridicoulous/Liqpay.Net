@@ -6,7 +6,7 @@
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 		<Authors>ridicoulous</Authors>
-		<Version>0.0.1-pre</Version>
+		<Version>0.0.2-pre</Version>
 		<PackageProjectUrl>https://github.com/ridicoulous/Liqpay.Net/</PackageProjectUrl>
 		<PackageLicenseUrl>https://github.com/ridicoulous/Liqpay.Net/blob/master/LICENSE</PackageLicenseUrl>
 		<PackageTags>liqpay</PackageTags>
@@ -21,8 +21,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="System.Text.Json" Version="6.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />    
   </ItemGroup>
 
 </Project>

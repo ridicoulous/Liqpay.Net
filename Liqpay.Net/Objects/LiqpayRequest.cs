@@ -1,36 +1,37 @@
 ﻿using Liqpay.Objects.Enums;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Text.Json.Serialization;
+
 
 namespace Liqpay.Net.Objects
 {
     public class LiqpayRequest
     {
-        [JsonPropertyName("version")]
+        [JsonProperty("version")]
         public int Version { get; set; }
-        [JsonPropertyName("public_key")]
+        [JsonProperty("public_key")]
         public string PublicKey { get; set; }
-        [JsonPropertyName("phone")]
+        [JsonProperty("phone")]
         public string Phone { get; set; }
-        [JsonPropertyName("card_token")]
+        [JsonProperty("card_token")]
         public string CardToken { get; set; }
-        [JsonPropertyName("ip")]
+        [JsonProperty("ip")]
         public string IP { get; set; }
-        [JsonPropertyName("prepare")]
+        [JsonProperty("prepare")]
         public string Prepare { get; set; }
-        [JsonPropertyName("paytypes")]
+        [JsonProperty("paytypes")]
         public LiqPayRequestPayType? PayTypes { get; set; }
-        [JsonPropertyName("action")]
+        [JsonProperty("action")]
         public LiqPayRequestAction? Action { get; set; }
-        [JsonPropertyName("amount")]
+        [JsonProperty("amount")]
         public double Amount { get; set; }
-        [JsonPropertyName("currency")]
+        [JsonProperty("currency")]
         public string Currency { get; set; }
-        [JsonPropertyName("description")]
+        [JsonProperty("description")]
         public string Description { get; set; }
-        [JsonPropertyName("sandbox")]
+        [JsonProperty("sandbox")]
         public string Sandbox { get; set; }
         [JsonIgnore]
         public bool IsSandbox
@@ -44,19 +45,19 @@ namespace Liqpay.Net.Objects
                 Sandbox = value ? "1" : null;
             }
         }
-        [JsonPropertyName("order_id")]
+        [JsonProperty("order_id")]
         public string OrderId { get; set; }
-        [JsonPropertyName("email")]
+        [JsonProperty("email")]
         public string Email { get; set; }
-        [JsonPropertyName("action_payment")]
+        [JsonProperty("action_payment")]
         public LiqPayRequestActionPayment? ActionPayment { get; set; }
-        [JsonPropertyName("expired_date")]
+        [JsonProperty("expired_date")]
         public DateTime? ExpiredDate { get; set; }
-        [JsonPropertyName("goods")]
+        [JsonProperty("goods")]
         public List<LiqpayRequestGoods> Goods { get; set; }
-        [JsonPropertyName("language")]
+        [JsonProperty("language")]
         public LiqPayRequestLanguage? Language { get; set; }
-        [JsonPropertyName("subscribe_periodicity")]
+        [JsonProperty("subscribe_periodicity")]
         public string SubscribePeriodicity { get; set; }
         public string Subscribe { get; set; }
 
@@ -67,12 +68,12 @@ namespace Liqpay.Net.Objects
             set { Subscribe = value ? "1" : "0"; }
         }
 
-        [JsonPropertyName("subscribe_date_start")]
+        [JsonProperty("subscribe_date_start")]
         public string SubscribeDateStart { get; set; }
 
-        [JsonPropertyName("result_url")]
+        [JsonProperty("result_url")]
         public string ResultUrl { get; set; }
-        [JsonPropertyName("server_url")]
+        [JsonProperty("server_url")]
         public string ServerUrl { get; set; }
 
         [JsonIgnore]

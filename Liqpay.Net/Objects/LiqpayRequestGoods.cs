@@ -7,13 +7,13 @@ namespace Liqpay.Net.Objects
     public class LiqpayRequestGoods
     {
 
-        [JsonPropertyName("amount")]
+        [JsonProperty("amount")]
         public double Amount { get; set; }
-        [JsonPropertyName("count")]
+        [JsonProperty("count")]
         public int Count { get; set; }
-        [JsonPropertyName("unit")]
+        [JsonProperty("unit")]
         public string Unit { get; set; }
-        [JsonPropertyName("name")]
+        [JsonProperty("name")]
         public string Name { get; set; }
 
     }
