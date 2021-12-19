@@ -15,6 +15,7 @@ namespace Liqpay.Net.Interfaces
         public string PrivateKey { get; }
         public string BackendUrl { get; }
         public string FrontendUrl { get; }
+        public bool IsSandbox { get; }
 
     }
 }
