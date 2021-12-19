@@ -44,13 +44,16 @@ namespace Liqpay.Net
             }
             return JsonConvert.DeserializeObject<LiqpayResponse>(data.DecodeBase64());
         }
-        public (string data, string signature) GenerateRequest(LiqpayRequest request)
+        public LiqpayRequestDto GenerateRequest(LiqpayRequest request)
         {
             request.IsSandbox = _config.IsSandbox;
+            request.Version = 3;
+            request.PublicKey = _config.PublicKey;
+
 
             var data = JsonConvert.SerializeObject(request, _jsonSettings).ToBase64String();
             var signature = data.CreateSignature(_config.PrivateKey);
-            return (data, signature);
+            return new LiqpayRequestDto(data, signature);
         }
         public async Task SendRequest(LiqpayRequest request)
         {
@@ -59,7 +62,7 @@ namespace Liqpay.Net
         }
 
         private async Task SendRequest(Dictionary<string, string> request)
-        {       
+        {
             var req = new HttpRequestMessage(HttpMethod.Post, ServerServerUrl) { Content = new FormUrlEncodedContent(request) };
             var res = await _httpClient.SendAsync(req);
             if (res.IsSuccessStatusCode)

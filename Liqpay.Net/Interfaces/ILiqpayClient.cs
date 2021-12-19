@@ -13,6 +13,6 @@ namespace Liqpay.Net.Interfaces
 
         LiqpayResponse OnServerCallback(string data, string signature);
         bool CheckSignature(string data, string signature);
-        (string data, string signature) GenerateRequest(LiqpayRequest request);
+        LiqpayRequestDto GenerateRequest(LiqpayRequest request);
     }
 }
