@@ -9,7 +9,7 @@ namespace Liqpay.Net.Objects
     {
 
         [JsonProperty("amount")]
-        public double Amount { get; set; }
+        public decimal Amount { get; set; }
         [JsonProperty("count")]
         public int Count { get; set; }
         [JsonProperty("unit")]

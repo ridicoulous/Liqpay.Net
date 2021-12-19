@@ -16,7 +16,7 @@ namespace Liqpay.Net.Objects
         [JsonConverter(typeof(StringEnumConverter))]
         public LiqPayResponseAction Action { get; set; }
         [JsonProperty("amount")]
-        public double Amount { get; set; }
+        public decimal Amount { get; set; }
         [JsonProperty("currency")]
         public string Currency { get; set; }
         [JsonProperty("description")]
@@ -49,7 +49,7 @@ namespace Liqpay.Net.Objects
         [JsonProperty("invoice_id")]
         public int? InvoiceId { get; set; }
         [JsonProperty("refund_amount")]
-        public double RefundAmount { get; set; }
+        public decimal RefundAmount { get; set; }
         [JsonProperty("refund_date_last")]
         [JsonConverter(typeof(TimestampConverter))]
         public DateTime? RefundDateLast { get; set; }
