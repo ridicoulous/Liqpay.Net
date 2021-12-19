@@ -1,5 +1,6 @@
 ﻿using Liqpay.Objects.Enums;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -22,8 +23,10 @@ namespace Liqpay.Net.Objects
         [JsonProperty("prepare")]
         public string Prepare { get; set; }
         [JsonProperty("paytypes")]
+        [JsonConverter(typeof(StringEnumConverter))]
         public LiqPayRequestPayType? PayTypes { get; set; }
         [JsonProperty("action")]
+        [JsonConverter(typeof(StringEnumConverter))]
         public LiqPayRequestAction? Action { get; set; }
         [JsonProperty("amount")]
         public decimal Amount { get; set; }
@@ -50,12 +53,14 @@ namespace Liqpay.Net.Objects
         [JsonProperty("email")]
         public string Email { get; set; }
         [JsonProperty("action_payment")]
+        [JsonConverter(typeof(StringEnumConverter))]
         public LiqPayRequestActionPayment? ActionPayment { get; set; }
         [JsonProperty("expired_date")]
         public DateTime? ExpiredDate { get; set; }
         [JsonProperty("goods")]
         public List<LiqpayRequestGoods> Goods { get; set; }
         [JsonProperty("language")]
+        [JsonConverter(typeof(StringEnumConverter))]
         public LiqPayRequestLanguage? Language { get; set; }
         [JsonProperty("subscribe_periodicity")]
         public string SubscribePeriodicity { get; set; }
