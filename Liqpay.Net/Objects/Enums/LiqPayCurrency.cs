@@ -2,6 +2,9 @@
 
 namespace Liqpay.Objects.Enums
 {
+    /// <summary>
+    /// USD, EUR, RUB, UAH
+    /// </summary>
     public enum LiqPayCurrency
     {
         [EnumMember(Value = "USD")]
@@ -11,12 +14,6 @@ namespace Liqpay.Objects.Enums
         [EnumMember(Value = "RUB")]
         RUB,
         [EnumMember(Value = "UAH")]
-        UAH,
-        [EnumMember(Value = "BYN")]
-        BYN,
-        [EnumMember(Value = "KZT")]
-        KZT,
-        [EnumMember(Value = "GBP")]
-        GBP
+        UAH   
     }
 }

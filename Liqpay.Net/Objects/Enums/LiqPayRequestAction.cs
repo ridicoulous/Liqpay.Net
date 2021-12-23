@@ -2,24 +2,13 @@
 
 namespace Liqpay.Objects.Enums
 {
+    /// <summary>
+    /// Required	String	Тип операции. Возможные значения: pay - платеж, hold - блокировка средств на счету отправителя, subscribe - регулярный платеж, paydonate - пожертвование, auth - предавторизация карты
+    /// </summary>
     public enum LiqPayRequestAction
     {
-        [EnumMember(Value = "invoice_send")]
-        Invoice_Send,
-        [EnumMember(Value = "invoice_cancel")]
-        InvoiceCancel,
         [EnumMember(Value = "pay")]
         Pay,
-        [EnumMember(Value = "payqr")]
-        PayQR,
-        [EnumMember(Value = "paytoken")]
-        PayToken,
-        [EnumMember(Value = "paycash")]
-        PayCash,
-        [EnumMember(Value = "paytrack")]
-        PayTrack,
-        [EnumMember(Value = "refund")]
-        Refund,
         [EnumMember(Value = "hold")]
         Hold,
         [EnumMember(Value = "subscribe")]
@@ -27,8 +16,6 @@ namespace Liqpay.Objects.Enums
         [EnumMember(Value = "paydonate")]
         Paydonate,
         [EnumMember(Value = "auth")]
-        Auth,
-        [EnumMember(Value = "status")]
-        Status,
+        Auth
     }
 }
